@@ -2,9 +2,28 @@ CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_DEVICE_generic=y
 CONFIG_GRUB_IMAGES=y
+CONFIG_PACKAGE_adbyby=y
+CONFIG_PACKAGE_libminiupnpc=y
+CONFIG_PACKAGE_libnatpmp=y
 CONFIG_PACKAGE_libnetsnmp=y
+CONFIG_PACKAGE_libstdcpp=y
+CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-argon-config=y
-CONFIG_PACKAGE_luci-compat=y
+# CONFIG_PACKAGE_luci-app-ddns is not set
+CONFIG_PACKAGE_luci-app-ntpc=y
+CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
+# CONFIG_PACKAGE_luci-app-upnp is not set
+CONFIG_PACKAGE_luci-app-zerotier=y
+CONFIG_PACKAGE_luci-i18n-adbyby-plus-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ntpc-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
+CONFIG_PACKAGE_luci-theme-Light=y
+CONFIG_PACKAGE_luci-theme-darkmatter=y
+CONFIG_PACKAGE_luci-theme-material=y
+CONFIG_PACKAGE_luci-theme-opentopd=y
+# CONFIG_PACKAGE_miniupnpd is not set
+CONFIG_PACKAGE_ntpclient=y
 CONFIG_PACKAGE_openssh-sftp-server=y
 CONFIG_PACKAGE_snmpd=y
+CONFIG_PACKAGE_zerotier=y
