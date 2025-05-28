@@ -118,16 +118,16 @@ AdGuardHome的核心是一个负责处理网络请求和执行插件逻辑的组
             # 删除DNS强制重定向53端口防火墙规则(个别源码本身不带此功能)(1为启用命令,填0为不作修改)禁用_53_重定向="0"
             # 删除DNS强制重定向53端口防火墙规则(个别源码本身不带此功能)(1为启用命令,填0为不作修改)
 导出导出 取消运行="0"
-                    # 取消路由器每天跑分任务(个别源码本身不带此功能)(1为启用命令,填0为不作修改)Cancel_running="0"
+                    # 取消路由器每天跑分任务(个别源码本身不带此功能)(1为启用命令,填0为不作修改) 取消运行="0"
                     # 取消路由器每天跑分任务(个别源码本身不带此功能)(1为启用命令,填0为不作修改)
 
 
-# 晶晨CPU系列打包固件设置(不懂请看说明)
-export导出 amlogic_model="s905d"amlogic_model="s905d"
-export导出 amlogic_kernel="6.1.120_6.12.15"amlogic_kernel="6.1.120_6.12.15"
-export导出自动内核="true"自动内核="真"
-export rootfs_size="512/2560"
-export kernel_usage="stable"
+# 晶晨CPU系列打包固件设置（不懂请看说明）
+导出导出 amlogic_model="s905d"amlogic_model="s905d"
+导出导出 amlogic_kernel="6.1.120_6.12.15"amlogic_kernel="6.1.120_6.12.15"
+导出导出自动内核="真"自动内核="真"
+导出 根文件系统大小="512/2560"
+导出 内核使用="稳定"
 
 
 # 修改插件名字
@@ -135,14 +135,14 @@ grep -rl '"终端"' . | xargs -r sed -i 's?"终端"?"TTYD"?g'
 grep -rl '"TTYD 终端"' . | xargs -r sed -i 's?"TTYD 终端"?"TTYD"?g'
 grep -rl '"网络存储"' . | xargs -r sed -i 's?"网络存储"?"NAS"?g'
 grep -rl '"实时流量监测"' . | xargs -r sed -i 's?"实时流量监测"?"流量"?g'
-grep -rl '"KMS 服务器"' . | xargs -r sed -i 's?"KMS 服务器"?"KMS激活"?g'
-grep -rl '"USB 打印服务器"' . | xargs -r sed -i 's?"USB 打印服务器"?"打印服务"?g'
-grep -rl '"Web 管理"' . | xargs -r sed -i 's?"Web 管理"?"Web管理"?g'
+grep -rl '"KMS 服务器" . | xargs -r sed -i '什么?"KMS 服务器"?"KMS激活"?'
+grep -rl '"USB 打印服务器"' . | xargs -r sed -i '？"USB 打印服务器"？"打印服务"？'
+grep -rl '"Web 管理"' . | xargs -r sed -i 's?"网页管理"?"网页管理"?g'
 grep -rl '"管理权"' . | xargs -r sed -i 's?"管理权"?"改密码"?g'
 grep -rl '"带宽监控"' . | xargs -r sed -i 's?"带宽监控"?"监控"?g'
 
 
-# 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
+# 整理固件包时候，删除您不想要的固件或者文件，让它不需要上传到Actions空间(根据编译机型变化，自行调整删除名称)
 cat >"$CLEAR_PATH" <<-EOF
 packages
 config.buildinfo
@@ -153,8 +153,8 @@ profiles.json
 openwrt-x86-64-generic-kernel.bin
 openwrt-x86-64-generic.manifest
 openwrt-x86-64-generic-squashfs-rootfs.img.gz
-EOF
+文件结束
 
-# 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF之间加入删除代码，记住这里对应的是固件的文件路径，比如： rm -rf /etc/config/luci
-cat >>$DELETE <<-EOF
-EOF
+# 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF之间加入删除代码，记住这里对应的是固件的文件路径，比如：rm -rf /etc/config/luci
+猫 >>$DELETE <<-EOF
+文件结束
